@@ -1,6 +1,7 @@
 server:
   port: 9091
 
+# eureka server details
 eureka:
   client:
     service-url:
