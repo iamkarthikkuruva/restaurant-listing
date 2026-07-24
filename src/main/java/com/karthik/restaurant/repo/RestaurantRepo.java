@@ -1,6 +1,6 @@
-package com.karthik.restaurant_listing.repo;
+package com.karthik.restaurant.repo;
 
-import com.karthik.restaurant_listing.entity.Restaurant;
+import com.karthik.restaurant.entity.Restaurant;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,10 +1,10 @@
-package com.karthik.restaurant_listing;
+package com.karthik.restaurant;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RestaurantListingApplicationTests {
+class RestaurantApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,13 +1,13 @@
-package com.karthik.restaurant_listing;
+package com.karthik.restaurant;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RestaurantListingApplication {
+public class RestaurantApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RestaurantListingApplication.class, args);
+		SpringApplication.run(RestaurantApplication.class, args);
 	}
 
 }

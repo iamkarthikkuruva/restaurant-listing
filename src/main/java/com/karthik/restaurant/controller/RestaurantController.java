@@ -1,8 +1,7 @@
-package com.karthik.restaurant_listing.controller;
+package com.karthik.restaurant.controller;
 
-import com.karthik.restaurant_listing.dto.RestaurantDTO;
-import com.karthik.restaurant_listing.entity.Restaurant;
-import com.karthik.restaurant_listing.service.RestaurantSericve;
+import com.karthik.restaurant.dto.RestaurantDTO;
+import com.karthik.restaurant.service.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,25 +15,22 @@ import java.util.List;
 public class RestaurantController {
 
     @Autowired
-    private RestaurantSericve restaurantSericve;
+    private RestaurantService restaurantService;
 
     @GetMapping("fetchAllRestaurants")
     public ResponseEntity<List<RestaurantDTO>> fetchAllRestaurants() {
-        List<RestaurantDTO> allRestaurants = restaurantSericve.findAllRestaurants();
+        List<RestaurantDTO> allRestaurants = restaurantService.findAllRestaurants();
         return new ResponseEntity<>(allRestaurants, HttpStatus.OK);
     }
 
     @PostMapping("/addRestaurant")
     public ResponseEntity<RestaurantDTO> saveRestaurant(@RequestBody RestaurantDTO restaurantDTO) {
-        RestaurantDTO restaurantAdded = restaurantSericve.addRestaurantInDB(restaurantDTO);
+        RestaurantDTO restaurantAdded = restaurantService.addRestaurantInDB(restaurantDTO);
         return new ResponseEntity<>(restaurantAdded, HttpStatus.CREATED);
     }
 
     @GetMapping("/fetchById/{id}")
     public ResponseEntity<RestaurantDTO> fetchRestaurantById(@PathVariable Integer id) {
-        return restaurantSericve.fetchRestaurantById(id);
+        return restaurantService.fetchRestaurantById(id);
     }
 }
-
-
-

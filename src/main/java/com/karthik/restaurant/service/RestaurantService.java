@@ -1,9 +1,9 @@
-package com.karthik.restaurant_listing.service;
+package com.karthik.restaurant.service;
 
-import com.karthik.restaurant_listing.dto.RestaurantDTO;
-import com.karthik.restaurant_listing.entity.Restaurant;
-import com.karthik.restaurant_listing.mapper.RestaurantMapper;
-import com.karthik.restaurant_listing.repo.RestaurantRepo;
+import com.karthik.restaurant.dto.RestaurantDTO;
+import com.karthik.restaurant.entity.Restaurant;
+import com.karthik.restaurant.mapper.RestaurantMapper;
+import com.karthik.restaurant.repo.RestaurantRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,10 +14,9 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-public class RestaurantSericve {
+public class RestaurantService {
     @Autowired
     private RestaurantRepo restaurantRepo;
-
 
     public List<RestaurantDTO> findAllRestaurants() {
         List<Restaurant> restaurants = restaurantRepo.findAll();

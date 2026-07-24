@@ -1,7 +1,7 @@
-package com.karthik.restaurant_listing.mapper;
+package com.karthik.restaurant.mapper;
 
-import com.karthik.restaurant_listing.dto.RestaurantDTO;
-import com.karthik.restaurant_listing.entity.Restaurant;
+import com.karthik.restaurant.dto.RestaurantDTO;
+import com.karthik.restaurant.entity.Restaurant;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -11,5 +11,4 @@ public interface RestaurantMapper {
 
         Restaurant mapRestaurantDTOToRestaurant(RestaurantDTO restaurantDTO);
         RestaurantDTO mapRestaurantToRestaurantDTO(Restaurant restaurant);
-
 }

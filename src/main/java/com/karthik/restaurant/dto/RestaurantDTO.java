@@ -1,4 +1,4 @@
-package com.karthik.restaurant_listing.dto;
+package com.karthik.restaurant.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
